@@ -61,6 +61,12 @@ function js() {
         .pipe(browserSync.reload({ stream: true }))
 }
 
+function fonts() {
+    return src('app/fonts/**/*.*')
+        .pipe(dest('dist/fonts'))
+        .pipe(browserSync.reload({ stream: true }))
+}
+
 function watchFiles() {
     gulp.watch('app/**/*.html', html)
     gulp.watch('app/scss/**/*.scss', styles)
@@ -72,7 +78,7 @@ function clean() {
     return del('dist/')
 }
 
-const build = gulp.series(clean, gulp.parallel(html, styles, img, js))
+const build = gulp.series(clean, gulp.parallel(html, styles, img, js, fonts))
 const watch = gulp.parallel(build, watchFiles, serve)
 
 exports.html = html
@@ -80,6 +86,7 @@ exports.styles = styles
 exports.img = img
 exports.clean = clean
 exports.js = js
+exports.fonts = fonts
 
 
 exports.build = build
