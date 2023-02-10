@@ -28,3 +28,53 @@ a {
     color: $default;
     @extend %quicksand-500;
 }
+
+.title {
+    color: $title;
+    font-size: 48px;
+    line-height: 48px;
+    @extend %roboto-700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text {
+    max-width: 570px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.categories {
+    &__items {
+        display: grid;
+        min-height: 635px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &:nth-child(1) {
+            grid-row: span 2;
+
+            .categories__item-subtitle,
+            .categories__link:hover {
+                color: #5800e4;
+            }
+        }
+
+        &:nth-child(2) {
+            grid-column: span 2;
+        }
+    }
+
+    &__item-subtitle {
+        margin-bottom: 5px;
+    }
+
+}
