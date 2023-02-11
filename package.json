@@ -9,6 +9,7 @@
   "author": "rocknroll",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.27.11",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -21,7 +22,11 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.3",
+    "rateyo": "^2.3.2",
     "sass": "^1.57.1",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.31"
   }
 }
