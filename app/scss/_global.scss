@@ -1,46 +1,51 @@
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    color: $default;
-    font-size: 16px;
-    line-height: 26px;
-    @extend %quicksand-500;
-    display: flex;
-    flex-direction: column;
+  color: $default;
+  font-size: 16px;
+  line-height: 26px;
+  @extend %quicksand-500;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-container {
+  min-width: 1730px;
+  margin: 0 auto;
 }
 
 a {
-    font-size: 16px;
-    line-height: 26px;
-    color: $default;
-    @extend %quicksand-500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $default;
+  @extend %quicksand-500;
 }
 
 .title {
-    color: $title;
-    font-size: 48px;
-    line-height: 48px;
-    @extend %roboto-700;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
+  color: $title;
+  font-size: 48px;
+  line-height: 48px;
+  @extend %roboto-700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .text {
-    max-width: 570px;
-    margin: 0 auto 55px;
-    text-align: center;
+  max-width: 570px;
+  margin: 0 auto 55px;
+  text-align: center;
 }
