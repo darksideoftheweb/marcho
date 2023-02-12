@@ -630,6 +630,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 50%;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
   }
 
   &__days,
@@ -655,6 +656,7 @@
   padding-top: 75px;
 
   &__list {
+    margin-top: 45px;
     height: 170px;
     display: flex;
     justify-content: space-around;
@@ -662,6 +664,115 @@
   }
 }
 
+.blog {
+  padding: 50px 0 160px;
+  background-image: url(../img/blog__bg.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+
+      content: "";
+      background-image: url(../img/decor/blog__after.svg);
+      position: absolute;
+      right: -22px;
+      top: -30px;
+      width: 126px;
+      height: 53px;
+      z-index: -1;
+    }
+  }
+
+  &__item-box {
+    padding: 30px 40px;
+  }
+
+  &__item {
+    max-width: 370px;
+    border: 1px solid #ececec;
+    transition: all .3s;
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+
+      .blog__item-link {
+        color: $accent;
+
+        &::after {
+          background-image: url(../img/icons/blog/arrow__hover.svg);
+        }
+      }
+    }
+  }
+
+  &__item-imglink {
+    display: block;
+
+    img {
+      height: 288px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-author,
+  &__item-date {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0px;
+      top: 3px;
+    }
+
+
+  }
+
+  &__item-author::before {
+    background-image: url(../img/icons/blog/user.svg);
+
+  }
+
+  &__item-date::before {
+    background-image: url(../img/icons/blog/date.svg);
+  }
+
+  &__item-title {
+    @extend %roboto-400;
+    margin-bottom: 20px;
+    color: $title;
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  &__item-link {
+    position: relative;
+  }
+
+  &__item-link::after {
+    content: "";
+    width: 10px;
+    height: 8px;
+    background-image: url(../img/icons/blog/arrow.svg);
+    position: absolute;
+    top: 8px;
+    right: -20px;
+  }
+}
 
 
 
