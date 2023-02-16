@@ -849,6 +849,45 @@
   }
 }
 
+.page-404 {
+  padding: 110px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @extend %roboto-700;
+    color: #28384f;
+    font-size: 48px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__text {
+    max-width: 470px;
+    margin-bottom: 55px;
+  }
+
+  &__link {
+    background-color: $accent;
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    @extend %roboto-400;
+    line-height: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 25px 0px rgba(254, 62, 87, 0.35);
+  }
+}
+
 
 
 
