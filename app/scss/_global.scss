@@ -111,3 +111,59 @@ a {
 .header--404-page {
   background-color: #f6f6f6;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+
+  .pagination__list {
+    display: flex;
+    padding: 0 35px;
+  }
+
+  &__item {
+    padding: 0 15px;
+  }
+
+  &__arrows {
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__prev {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      background-image: url(../img/icons/shop/angle-left.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__next {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      background-image: url(../img/icons/shop/angle-right.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}
